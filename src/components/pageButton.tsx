@@ -13,7 +13,7 @@ const PageButton = () => {
         </div>
         <p className='text-xs font-semibold'>Profile</p>
     </Link>
-    <Link href={'/profile'} className='bg-white w-16 h-[70px] rounded-md flex flex-col gap-1 text-[#33475b] justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative'>
+    <Link href={'/cart'} className='bg-white w-16 h-[70px] rounded-md flex flex-col gap-1 text-[#33475b] justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative'>
         <div className='flex justify-center items-center'>
         <RiShoppingCart2Fill className='text-2xl -translate-x-12 group-hover:translate-x-3 transition-transform duration-200'></RiShoppingCart2Fill>
         <RiShoppingCart2Fill className='text-2xl -translate-x-3 group-hover:translate-x-12 transition-transform duration-200'></RiShoppingCart2Fill>
@@ -25,4 +25,4 @@ const PageButton = () => {
   )
 }
 
-export default PageButton
+export default PageButton;

@@ -3,6 +3,7 @@ import "../../styles/globals.css"
 import Navbar from "@/components/Navbar";
 import "slick-carousel/slick/slick.css"
 import PageButton from "@/components/pageButton";
+import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Navbar />
         <PageButton />
         {children}
+        <Footer />
         </body>
     </html>
   );
