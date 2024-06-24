@@ -5,18 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { MdOutlineStarPurple500 } from 'react-icons/md';
+import { StringDiff } from 'sanity';
 
 interface Props{
-    product:ProductProps[]
+    product:ProductProps[],
+    bg:string
 }
 
-const Product = ({product}:Props) => {
+const Product = ({product,bg}:Props) => {
 
   return (
     
     <div className='w-full relative group border-[1px] border-black hover:shadow-lg duration-200 shadow-gray-500 overflow-hidden rounded-md'>
         <div className='w-full h-80 flex items-center justify-center bg-white overflow-hidden'>
-            <div className='relative'>
+            <div className={`relative ${bg}`}>
                 <Link href={'/'}>
                 <Image src={urlForImage(product?.image)} alt='product image'
                     width={700}
