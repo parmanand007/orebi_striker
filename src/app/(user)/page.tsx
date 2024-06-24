@@ -3,6 +3,7 @@ import { groq } from 'next-sanity'
 import { client } from '../../../sanity/lib/client';
 import exp from 'constants';
 import NewArrival from '@/components/NewArrival';
+import HomeBanner from '@/components/HomeBanner';
 
 export const revalidate =10;
 
@@ -22,6 +23,7 @@ const HomePage = async() => {
     <main className='text-sm overflow-hidden min-h-screen'>
       <Banner banners={banners}/>
       <NewArrival products ={newArrivalProducts}/>
+      <HomeBanner />
     </main>
   )
 }
