@@ -18,8 +18,6 @@ const newArrivalQuery =groq`*[_type == 'product' && position == "Bestsellers"]{
 const HomePage = async() => {
   const banners = await client.fetch(bannerQuery)
   const newArrivalProducts = await client.fetch(newArrivalQuery)
-  console.log("first",newArrivalProducts)
-  // console.log(newArrivalProducts)
   return (
     <main className='text-sm overflow-hidden min-h-screen'>
       <Banner banners={banners}/>

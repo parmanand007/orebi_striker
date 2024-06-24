@@ -4,6 +4,7 @@ import { urlForImage } from '../../sanity/lib/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { MdOutlineStarPurple500 } from 'react-icons/md';
 
 interface Props{
     product:ProductProps[]
@@ -13,7 +14,7 @@ const Product = ({product}:Props) => {
 
   return (
     
-    <div className='w-full relative group border-[1px] border-black hover:shadow-lg duration-200 shadow-gray-500 overflow-hidden '>
+    <div className='w-full relative group border-[1px] border-black hover:shadow-lg duration-200 shadow-gray-500 overflow-hidden rounded-md'>
         <div className='w-full h-80 flex items-center justify-center bg-white overflow-hidden'>
             <div className='relative'>
                 <Link href={'/'}>
@@ -43,11 +44,18 @@ const Product = ({product}:Props) => {
             </div>
         </div>
         <div className='max-w-80 py-6 flex flex-col gap-1 px-4'>
-            <div className='flex items-center justify-between gap-2'>
+            <div className='flex items-center justify-between gap-2 '>
                 <h2 className='text-lg text-primeColor font-bold'>{product?.title.substring(0,15)}</h2>
-                <div>
-                    <p>${product?.rowprice} </p>
-                    <p>${product?.price} </p>
+                <div className='flex items-center gap-2'>
+                    <p className='text-[#767676] text-xs line-through'>${product?.rowprice} </p>
+                    <p className='font-semibold'>${product?.price} </p>
+                </div>
+            </div>
+            <div className='flex items-center justify-between'>
+                <p className='text-[#767676] text-sm]'> a product by <span className='font-semibold text-primeColor'>{product?.brand}</span></p>
+                <div className='flex items-center gap-1'>
+                    <MdOutlineStarPurple500 className='text-lg text-yellow-500' />
+                    <span className='font-medium text-sm'>{product?.ratings}</span>
                 </div>
             </div>
         </div>

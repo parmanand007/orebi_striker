@@ -13,7 +13,6 @@ import { HiMenuAlt2 } from 'react-icons/hi'
 const Navbar = () => {
   const [searchQuery,setSearchQuery] = useState("")
   const pathname = usePathname()
-  console.log(pathname)
   const navBarList =[
     {
       title:"Home",
