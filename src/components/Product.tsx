@@ -19,7 +19,7 @@ const Product = ({product,bg}:Props) => {
     <div className='w-full relative group border-[1px] border-black hover:shadow-lg duration-200 shadow-gray-500 overflow-hidden rounded-md'>
         <div className='w-full h-80 flex items-center justify-center bg-white overflow-hidden'>
             <div className={`relative ${bg}`}>
-                <Link href={'/'}>
+                <Link href={`/product/${product?.slug?.current}`}>
                 <Image src={urlForImage(product?.image)} alt='product image'
                     width={700}
                     height={700}
