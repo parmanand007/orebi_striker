@@ -35,7 +35,6 @@ const SinglePage = async({params:{slug}}:Props) => {
     }`;
     const product:ProductProps = await client.fetch(query,{slug});
     const specialOffersProduct = await client.fetch(specialOffersQuery)
-    console.log("special",specialOffersProduct)
   return (
     <Container className='my-10'>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full -mt-5 xl:-mt-8 bg-gray-100 p-4'>

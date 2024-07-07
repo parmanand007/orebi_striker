@@ -8,8 +8,8 @@ import { MdOutlineStarPurple500 } from 'react-icons/md';
 import { StringDiff } from 'sanity';
 
 interface Props{
-    product:ProductProps[],
-    bg:string
+    product:ProductProps,
+    bg?:string
 }
 
 const Product = ({product,bg}:Props) => {
